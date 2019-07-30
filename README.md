@@ -1,5 +1,5 @@
 # graphql-nodejs
-exemplo de  api  graphql usando node.js  *graphql-yoga*
+exemplo de  api  graphql usando node.js  ***graphql-yoga***
 
  * Query
 ```
@@ -20,7 +20,7 @@ query {
 
 ```
 
-*Mutation
+ * Mutation
 ```
 mutation {
   savePost(
