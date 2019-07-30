@@ -21,3 +21,15 @@ query {
 ```
 
 *Mutation
+```
+mutation {
+  savePost(
+    postId:3,
+    title:" post 3"
+  )
+  {
+    postId,
+    title  
+  }
+}
+```
