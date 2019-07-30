@@ -1,7 +1,7 @@
 # graphql-nodejs
-exemplo de  api  graphql usando node.js   graphql-yoga
+exemplo de  api  graphql usando node.js  *graphql-yoga*
 
-*Query
+ * Query
 ```
 
 query {
