@@ -33,3 +33,4 @@ mutation {
   }
 }
 ```
+![alt text](https://github.com/leandro0404/graphql-nodejs/blob/master/img/mutation.png)
