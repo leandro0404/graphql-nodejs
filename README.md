@@ -2,7 +2,7 @@
   Exemplo de  api  graphql usando node.js   ***graphql-yoga***
 
  * Query
-```
+```graphql
 
 query {
  posts(postId:1){
@@ -21,7 +21,7 @@ query {
 ```
 
  * Mutation
-```
+```graphql
 mutation {
   savePost(
     postId:3,
