@@ -4,11 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "docker",
+    "deploy",
+    "container",
+    "javascript",
+    "tutorial",
+    "graphql"
+  ],
+  "author": "Leandro Silveira Alves Moreira <leandrobhmgg@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "graphql-yoga": "^1.17.4"
+  },
+  "homepage": "https://github.com/leandro0404/graphql-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandro0404/graphql-nodejs.git"
   }
 }
