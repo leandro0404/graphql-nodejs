@@ -5,26 +5,14 @@ const url = `http://localhost:8028/`;
 const request = require('supertest')(url);
 const should = chai.should();
 const assert = chai.assert;
+const postQueryAll = require('./get-post-all');
+const postQueryId = require('./get-post-id');
 
 
 describe('GraphQL', () => {
     it('Retorna post com  id = 1', (done) => {
         request.post('')
-        .send({ query:  `
-        query {
-            posts(postId:1){
-             postId,
-             title,
-             comments{
-               commentId,
-               text,
-               author{
-                 name
-               }
-             }
-        }
-    }
-        ` })
+        .send({ query: postQueryAll})
         .expect(200)
         .end((err,res) => {
             // res will contain array with one user
@@ -38,13 +26,7 @@ describe('GraphQL', () => {
 
     it('Retorna todos os posts', (done) => {
                 request.post('')
-                .send({ query: `query {
-                    posts{
-                     postId,
-                     title
-                 
-                   }
-                 }` })
+                .send({ query: postQueryId })
                 .expect(200)
                 .end((err, res) => {
                    
@@ -52,16 +34,3 @@ describe('GraphQL', () => {
                 })  
             })
 });
-
-
-
-function readQuery (path)
-{
- fs.readFile(process.cwd() + path, function(err, data)
-    {
-        console.log(data.toString())
-        return data.toString();
-           
-    });
-};
-readQuery("/test/get-post-id.graphql")
