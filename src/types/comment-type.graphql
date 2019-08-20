@@ -1,0 +1,5 @@
+ type Comment {
+        commentId: Int,
+        text: String,
+        author: [Author]
+    }

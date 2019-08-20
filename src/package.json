@@ -19,7 +19,8 @@
   "author": "Leandro Silveira Alves Moreira <leandrobhmgg@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "^1.17.4"
+    "graphql-yoga": "^1.17.4",
+    "merge-graphql-schemas": "^1.7.0"
   },
   "homepage": "https://github.com/leandro0404/graphql-nodejs",
   "repository": {

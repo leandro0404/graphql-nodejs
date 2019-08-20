@@ -1,0 +1,3 @@
+ type Mutation {
+        savePost(postId: Int, title: String): Post
+    }

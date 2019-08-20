@@ -1,0 +1,6 @@
+type Post {
+        postId: Int,
+        title: String,
+        likesCount: Int,
+        comments: [Comment]
+    }
