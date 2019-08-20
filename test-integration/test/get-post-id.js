@@ -1,4 +1,4 @@
- query {
+const query = ` query {
             posts(postId:1){
              postId,
              title,
@@ -10,4 +10,6 @@
                }
              }
         }
-}
+}`;
+
+module.exports = query;

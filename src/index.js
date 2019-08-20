@@ -21,7 +21,8 @@ const typeDefs = `
         posts(postId: Int): [Post]
     }
     type Mutation {
-        savePost(postId: Int, title: String): Post
+        savePost(title: String): Post
+        likePost(postId: Int, like: Boolean): Post
     }
 `;
 
@@ -33,7 +34,18 @@ const resolvers = {
     },
     Mutation: {
         savePost: function (obj, args, context, info) {
-            return data.saveData('posts', args);
+            const posts = data.getData('posts');
+            const values = {
+                postId: posts.length + 1,
+                ...args
+            }
+            return new Promise((resolve) => {
+                setTimeout(()=> resolve(data.saveData('posts', values)), 2000)
+            }) 
+            // return data.saveData('posts', values);
+        },
+        likePost: function (postId, args, context, info) {
+            return data.likePost(postId, args);
         }
     },
     Post: {

@@ -3,10 +3,12 @@ const data = {
         {
             postId: 1,
             title: " post 1 ",
+            likesCount: 1,
         },
         {
             postId: 2,
-            title: "post 2"
+            title: "post 2",
+            likesCount: 0,
         }
     ],
     comments: [
@@ -44,3 +46,10 @@ exports.saveData = function (collection, value) {
     data[collection].push(value);
     return value;
 };
+
+exports.likePost = function (postId, like = true) {
+    const postIndex = data.posts.findIndex(post => post.postId === postId)
+    let currentCount = data.posts[postIndex].likesCount ;
+    data.posts[postIndex].likesCount = like ? currentCount - 1 : currentCount + 1;
+    return  data.posts[postIndex].likesCount;
+}
